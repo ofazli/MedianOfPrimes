@@ -45,7 +45,7 @@ describe('Testing median of primes', ()=>{
         locators.resul_text().should('contain', '3,5')
         
     });
-    it('The user enter the number 18 and the result shows as ', () => {
+    it('The user enter the number 18 and the result shows as 7', () => {
         locators.number_value().type('18')
         locators.submit_btn().click()
         locators.resul_text().should('contain', '7')
