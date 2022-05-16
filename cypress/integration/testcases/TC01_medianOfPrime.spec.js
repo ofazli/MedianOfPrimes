@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 Cypress.on('uncaught:exception', (err, runnable) => {
-    // returning false here prevents Cypress from
-    // failing the test
+   
     return false
   })
 
@@ -24,7 +23,7 @@ describe('Testing median of primes', ()=>{
     it('Verify the name of the application in text format ', () => {
   
         locators.home_txt().should('contain', 'median')
-        //basligi degil icerigini assersion islemi yapilacak
+       
     
         
     });
@@ -74,7 +73,7 @@ describe('Testing median of primes', ()=>{
         locators.number_value().type(over_max_value)
         locators.submit_btn().click()
         cy.on('window:alert', (str) => {
-            //Mocha assertions
+    
             expect(str).to.equal('Number exceeds limit')
         })
         
